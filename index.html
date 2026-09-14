@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorldRecipe - Resep Makanan Internasional</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/96/restaurant-.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800;900&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#main-navbar" data-bs-offset="100" tabindex="0">
+    <!-- Navbar dengan ScrollSpy -->
+    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-utensils me-2"></i>
+                <span class="brand-text">World<span class="brand-highlight">Recipe</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#latest-recipes">Terbaru</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#popular-recipes">Populer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#categories">Kategori</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Kontak</a>
+                    </li>
+                    </li>
+                    <li class="nav-item d-lg-none">
+                        <button class="btn btn-link nav-link" id="mobileSearchToggle">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero/Banner dengan Parallax -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-75">
+                <div class="col-lg-8 col-md-10 mx-auto text-center">
+                    <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+                        <span class="hero-badge">Selamat Datang di</span>
+                        <h1 class="hero-title mb-3">
+                            <i class="fas fa-utensils me-2"></i>
+                            World<span class="text-primary">Recipe</span>
+                        </h1>
+                        <p class="hero-subtitle mb-4">
+                            Jelajahi ribuan resep makanan internasional dari seluruh dunia. 
+                            Masak seperti chef profesional dengan panduan langkah demi langkah yang mudah diikuti.
+                        </p>
+                        
+                        <!-- Search Bar -->
+                        <div class="search-container mb-4" data-aos="fade-up" data-aos-delay="300">
+                            <div class="input-group search-group">
+                                <span class="input-group-text">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                                <input type="text" 
+                                       class="form-control form-control-lg" 
+                                       id="searchInput" 
+                                       placeholder="Cari resep (contoh: pasta, ayam, dessert...)"
+                                       aria-label="Cari resep">
+                                <button class="btn btn-primary" type="button" id="searchButton">
+                                    <i class="fas fa-search me-2"></i>Cari
+                                </button>
+                            </div>
+                            <div class="search-suggestions mt-2" id="searchSuggestions">
+                                <small class="text-light">Coba: <span class="suggestion-link">Spaghetti</span>, 
+                                <span class="suggestion-link">Burger</span>, 
+                                <span class="suggestion-link">Sushi</span>, 
+                                <span class="suggestion-link">Cake</span></small>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-buttons">
+                            <a href="#latest-recipes" class="btn btn-primary btn-lg me-3 mb-3">
+                                <i class="fas fa-fire me-2"></i>Lihat Resep Terbaru
+                            </a>
+                            <a href="#categories" class="btn btn-outline-light btn-lg mb-3">
+                                <i class="fas fa-search me-2"></i>Jelajahi Kategori
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-stats mt-5 pt-4" data-aos="fade-up" data-aos-delay="400">
+                        <!-- Stats tetap sama -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="600">
+                <a href="#latest-recipes" class="scroll-link">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+        </div>
+        <!-- Parallax Background Elements -->
+        <div class="parallax-elements">
+            <div class="parallax-element element-1">
+                <i class="fas fa-utensil-spoon"></i>
+            </div>
+            <div class="parallax-element element-2">
+                <i class="fas fa-pepper-hot"></i>
+            </div>
+            <div class="parallax-element element-3">
+                <i class="fas fa-cheese"></i>
+            </div>
+            <div class="parallax-element element-4">
+                <i class="fas fa-lemon"></i>
+            </div>
+            <div class="parallax-element element-5">
+                <i class="fas fa-fish"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Recipes -->
+    <section id="latest-recipes" class="section-padding">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Eksplorasi</span>
+                <h2 class="section-title">Resep Terbaru</h2>
+                <p class="section-subtitle">Temukan penemuan kuliner terbaru dari seluruh dunia</p>
+            </div>
+            
+            <div class="row" id="latestRecipesContainer">
+                <!-- Recipes will be loaded here via AJAX -->
+                <div class="col-12 text-center py-5">
+                    <div class="spinner-grow text-primary" role="status">
+                        <span class="visually-hidden">Memuat resep...</span>
+                    </div>
+                    <p class="mt-3">Memuat resep terbaru...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Recipes -->
+    <section id="popular-recipes" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Terpopuler</span>
+                <h2 class="section-title">Resep Favorit</h2>
+                <p class="section-subtitle">Resep yang paling banyak disukai oleh komunitas kami</p>
+            </div>
+            
+            <div class="row" id="popularRecipesContainer">
+                <!-- Recipes will be loaded here via AJAX -->
+                <div class="col-12 text-center py-5">
+                    <div class="spinner-grow text-primary" role="status">
+                        <span class="visually-hidden">Memuat resep...</span>
+                    </div>
+                    <p class="mt-3">Memuat resep populer...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories & Filtering -->
+    <section id="categories" class="section-padding">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Kategori</span>
+                <h2 class="section-title">Jelajahi Berdasarkan Jenis</h2>
+                <p class="section-subtitle">Temukan resep berdasarkan kategori favoritmu</p>
+            </div>
+            
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div class="category-filter" data-aos="fade-up" data-aos-delay="200">
+                        <button class="filter-btn active" data-category="all">
+                            <i class="fas fa-globe me-2"></i>Semua
+                        </button>
+                        <button class="filter-btn" data-category="chicken">
+                            <i class="fas fa-drumstick-bite me-2"></i>Ayam
+                        </button>
+                        <button class="filter-btn" data-category="beef">
+                            <i class="fas fa-hamburger me-2"></i>Daging Sapi
+                        </button>
+                        <button class="filter-btn" data-category="seafood">
+                            <i class="fas fa-fish me-2"></i>Seafood
+                        </button>
+                        <button class="filter-btn" data-category="vegetarian">
+                            <i class="fas fa-leaf me-2"></i>Vegetarian
+                        </button>
+                        <button class="filter-btn" data-category="dessert">
+                            <i class="fas fa-ice-cream me-2"></i>Dessert
+                        </button>
+                        <button class="filter-btn" data-category="pasta">
+                            <i class="fas fa-pasta me-2"></i>Pasta
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row" id="filteredRecipesContainer">
+                <!-- Recipes will be loaded here via AJAX -->
+                <div class="col-12 text-center py-5">
+                    <div class="spinner-grow text-primary" role="status">
+                        <span class="visually-hidden">Memuat resep...</span>
+                    </div>
+                    <p class="mt-3">Memuat resep berdasarkan kategori...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                    <div class="about-image">
+                        <div class="image-main">
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                                 alt="About WorldRecipe" 
+                                 class="img-fluid rounded-3 shadow-lg">
+                        </div>
+                        <div class="image-decoration d-none d-lg-block">
+                            <div class="decoration-1"></div>
+                            <div class="decoration-2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="ps-lg-5">
+                        <span class="section-label">Tentang Kami</span>
+                        <h2 class="section-title mb-4">Kisah di Balik <span class="text-primary">WorldRecipe</span></h2>
+                        
+                        <p class="lead mb-4">WorldRecipe lahir dari passion kami terhadap kuliner dunia dan keinginan untuk membuat memasak makanan internasional menjadi mudah dan menyenangkan bagi semua orang.</p>
+                        
+                        <div class="about-features mb-4">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check-circle text-primary"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h5>Resep Teruji</h5>
+                                    <p>Setiap resep diuji oleh chef profesional untuk memastikan hasil terbaik</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-globe-asia text-primary"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h5>Autentik Internasional</h5>
+                                    <p>Resep asli dari berbagai negara dengan bahan yang mudah ditemukan</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-users text-primary"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h5>Komunitas Aktif</h5>
+                                    <p>Bergabung dengan komunitas pecinta masakan dari seluruh dunia</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="#contact" class="btn btn-primary btn-lg px-4">
+                            <i class="fas fa-handshake me-2"></i>Bergabung dengan Kami
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section-padding">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Bantuan</span>
+                <h2 class="section-title">Pertanyaan yang Sering Diajukan</h2>
+                <p class="section-subtitle">Temukan jawaban untuk pertanyaan umum seputar WorldRecipe</p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="accordion" id="faqAccordion" data-aos="fade-up">
+                        <!-- FAQ items will be generated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Kontak</span>
+                <h2 class="section-title">Hubungi Kami</h2>
+                <p class="section-subtitle">Punya pertanyaan atau saran? Kami siap membantu!</p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="contact-card" data-aos="fade-up">
+                        <div class="row g-0">
+                            <div class="col-lg-5 d-none d-lg-block">
+                                <div class="contact-info">
+                                    <h4 class="mb-4">Info Kontak</h4>
+                                    <div class="contact-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <div>
+                                            <h6>Alamat</h6>
+                                            <p>Jl. Kuliner Internasional No. 123, Jakarta, Indonesia</p>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-phone"></i>
+                                        <div>
+                                            <h6>Telepon</h6>
+                                            <p>+62 21 1234 5678</p>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <div>
+                                            <h6>Email</h6>
+                                            <p>info@worldrecipe.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-clock"></i>
+                                        <div>
+                                            <h6>Jam Operasional</h6>
+                                            <p>Senin - Jumat: 9:00 - 18:00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="contact-form p-4 p-lg-5">
+                                    <form id="contactForm">
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label for="name" class="form-label">Nama Lengkap</label>
+                                                <input type="text" class="form-control" id="name" required>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label for="email" class="form-label">Alamat Email</label>
+                                                <input type="email" class="form-control" id="email" required>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="subject" class="form-label">Subjek</label>
+                                            <input type="text" class="form-control" id="subject" required>
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="message" class="form-label">Pesan</label>
+                                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="submit" class="btn btn-primary btn-lg px-5">
+                                                <i class="fas fa-paper-plane me-2"></i>Kirim Pesan
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="footer-brand mb-4">
+                        <i class="fas fa-utensils me-2"></i>
+                        <span class="brand-text">World<span class="brand-highlight">Recipe</span></span>
+                    </div>
+                    <p class="footer-text">Portal resep makanan internasional terlengkap. Temukan resep dari seluruh dunia untuk Anda coba di dapur rumah.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-title">Menu</h5>
+                    <ul class="footer-links">
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#latest-recipes">Resep Terbaru</a></li>
+                        <li><a href="#popular-recipes">Resep Populer</a></li>
+                        <li><a href="#categories">Kategori</a></li>
+                        <li><a href="#about">Tentang Kami</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-title">Lainnya</h5>
+                    <ul class="footer-links">
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Kontak</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                        <li><a href="#">Peta Situs</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="footer-title">Langganan</h5>
+                    <p class="footer-text">Berlangganan untuk mendapatkan resep baru setiap minggu!</p>
+                    <form class="newsletter-form">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Email Anda" required>
+                            <button class="btn btn-primary" type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="copyright">&copy; 2025 WorldRecipe. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Recipe Modal -->
+    <div class="modal fade" id="recipeModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModalTitle">
+                        <i class="fas fa-utensils me-2"></i>Detail Resep
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="recipeModalBody">
+                    <!-- Recipe details will be loaded here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        <i class="fas fa-times me-2"></i>Tutup
+                    </button>
+                    <button type="button" class="btn btn-outline-primary" id="printRecipeBtn">
+                        <i class="fas fa-print me-2"></i>Cetak
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Search Container -->
+    <div class="mobile-search-container">
+        <div class="input-group">
+            <input type="text" 
+                class="form-control" 
+                placeholder="Cari resep..."
+                id="mobileSearchInput">
+            <button class="btn btn-primary" type="button" id="mobileSearchButton">
+                <i class="fas fa-search"></i>
+            </button>
+            <button class="btn btn-outline-secondary" type="button" id="closeMobileSearch">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Memuat...</span>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

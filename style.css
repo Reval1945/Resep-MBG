@@ -12,6 +12,7 @@ a {
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
+    padding-top: 80px; /* Untuk mengimbangi navbar */
 }
 
 body {
